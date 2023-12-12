@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="clinicConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="clinicConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ARMLikarny.Properties.Settings.GlobalReference.Default.clinicConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Patients_ReportTableAdapter" GeneratorDataComponentClassName="Patients_ReportTableAdapter" Name="Patients_Report" UserDataComponentName="Patients_ReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="clinicConnectionString (Settings)" DbObjectName="clinic.dbo.Patients_Report" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PatientID, FirstName, LastName, DateOfBirth, ContactInfo, HealthStatus, Diagnosis, DoctorRecommendations, TestResults FROM dbo.Patients_Report</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PatientID" DataSetColumn="PatientID" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="DateOfBirth" DataSetColumn="DateOfBirth" />
+              <Mapping SourceColumn="ContactInfo" DataSetColumn="ContactInfo" />
+              <Mapping SourceColumn="HealthStatus" DataSetColumn="HealthStatus" />
+              <Mapping SourceColumn="Diagnosis" DataSetColumn="Diagnosis" />
+              <Mapping SourceColumn="DoctorRecommendations" DataSetColumn="DoctorRecommendations" />
+              <Mapping SourceColumn="TestResults" DataSetColumn="TestResults" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet2" msprop:Generator_DataSetName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Patients_Report" msprop:Generator_RowEvHandlerName="Patients_ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Patients_ReportRowDeleted" msprop:Generator_RowDeletingName="Patients_ReportRowDeleting" msprop:Generator_RowEvArgName="Patients_ReportRowChangeEvent" msprop:Generator_TablePropName="Patients_Report" msprop:Generator_RowChangedName="Patients_ReportRowChanged" msprop:Generator_RowChangingName="Patients_ReportRowChanging" msprop:Generator_TableClassName="Patients_ReportDataTable" msprop:Generator_RowClassName="Patients_ReportRow" msprop:Generator_TableVarName="tablePatients_Report" msprop:Generator_UserTableName="Patients_Report">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PatientID" msprop:Generator_ColumnPropNameInRow="PatientID" msprop:Generator_ColumnPropNameInTable="PatientIDColumn" msprop:Generator_ColumnVarNameInTable="columnPatientID" msprop:Generator_UserColumnName="PatientID" type="xs:int" />
+              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_UserColumnName="FirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateOfBirth" msprop:Generator_ColumnPropNameInRow="DateOfBirth" msprop:Generator_ColumnPropNameInTable="DateOfBirthColumn" msprop:Generator_ColumnVarNameInTable="columnDateOfBirth" msprop:Generator_UserColumnName="DateOfBirth" type="xs:dateTime" />
+              <xs:element name="ContactInfo" msprop:Generator_ColumnPropNameInRow="ContactInfo" msprop:Generator_ColumnPropNameInTable="ContactInfoColumn" msprop:Generator_ColumnVarNameInTable="columnContactInfo" msprop:Generator_UserColumnName="ContactInfo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HealthStatus" msprop:Generator_ColumnPropNameInRow="HealthStatus" msprop:Generator_ColumnPropNameInTable="HealthStatusColumn" msprop:Generator_ColumnVarNameInTable="columnHealthStatus" msprop:Generator_UserColumnName="HealthStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Diagnosis" msprop:Generator_ColumnPropNameInRow="Diagnosis" msprop:Generator_ColumnPropNameInTable="DiagnosisColumn" msprop:Generator_ColumnVarNameInTable="columnDiagnosis" msprop:Generator_UserColumnName="Diagnosis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DoctorRecommendations" msprop:Generator_ColumnPropNameInRow="DoctorRecommendations" msprop:Generator_ColumnPropNameInTable="DoctorRecommendationsColumn" msprop:Generator_ColumnVarNameInTable="columnDoctorRecommendations" msprop:Generator_UserColumnName="DoctorRecommendations" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TestResults" msprop:Generator_ColumnPropNameInRow="TestResults" msprop:Generator_ColumnPropNameInTable="TestResultsColumn" msprop:Generator_ColumnVarNameInTable="columnTestResults" msprop:Generator_UserColumnName="TestResults" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Patients_Report" />
+      <xs:field xpath="mstns:PatientID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
